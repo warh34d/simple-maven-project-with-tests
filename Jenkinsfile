@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        bat 'C:/maven/bin/mvn.cmd test'
+        bat 'C:/maven/bin/mvn.cmd test -Dmaven.test.failure.ignore=true'
         junit 'target/surefire-reports/*.xml'
       }
     }
