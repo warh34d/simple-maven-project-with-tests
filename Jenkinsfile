@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         bat 'C:/maven/bin/mvn.cmd test'
-        junit 'target/surefire-reports'
+        junit 'target/surefire-reports/*.xml'
       }
     }
   }
