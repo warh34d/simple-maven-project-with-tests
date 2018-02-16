@@ -7,5 +7,10 @@ pipeline {
         junit 'target/surefire-reports/*.xml'
       }
     }
+    stage('Install') {
+      steps {
+        bat 'C:/maven/bin/mvn.cmd install'
+      }
+    }
   }
 }
